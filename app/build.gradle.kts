@@ -40,26 +40,38 @@ android {
 }
 
 dependencies {
-
+    // Core de Android
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
+
+    // Jetpack Compose
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.ui)
-    implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
-    implementation(libs.androidx.material3)
+    implementation(libs.androidx.material3)  // Mantén solo si realmente usas Material 3
+
+    // Navigation para Compose
+    implementation("androidx.navigation:navigation-compose:2.5.3")
+
+    // Retrofit para consumo de API
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
-    implementation("com.squareup.picasso:picasso:2.71828")
-    implementation(libs.androidx.recyclerview)
-    implementation(libs.androidx.appcompat)
 
+    // ViewModel con Compose
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.5.1")
+
+    // Corrutinas para manejar llamadas asíncronas
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
+
+    // Coil para cargar imágenes desde la API
+    implementation("io.coil-kt:coil-compose:2.2.2")
+
+    // Testing
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
-    debugImplementation(libs.androidx.ui.test.manifest)
 }

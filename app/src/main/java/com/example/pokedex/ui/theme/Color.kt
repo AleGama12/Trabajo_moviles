@@ -1,4 +1,4 @@
-package com.example.appdog.ui.theme
+package com.example.pokedex.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

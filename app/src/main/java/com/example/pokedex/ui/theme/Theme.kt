@@ -1,4 +1,4 @@
-package com.example.appdog.ui.theme
+package com.example.pokedex.ui.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
